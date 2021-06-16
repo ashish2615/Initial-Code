@@ -1,0 +1,15 @@
+[
+JobName         = "CBC_BBH_SNRinj_Param_%n";
+JobGroup        = "CBC_BBH_uni_v1.0";
+Executable      = "CBC_BBH_SNRinj.sh";
+Arguments       = "%s";
+Parameters      = 100;
+ParameterStart  = 1;
+ParameterStep   = 1;
+StdOutput       = "StdOut_%s";
+StdError        = "StdErr_%s";
+InputSandbox    = {"CBC_BBH_SNRinj.sh", "CBC_BBH_SNRinj.py", "injections_test.hdf5", "PzDlBH.txt"};
+OutputSandbox   = {"StdOut_%s", "StdErr_%s", "./outdir/sample_param_%s_result.h5",
+"./outdir/injection_parameters_%s.txt", "./outdir/injection_parameters_%s.npy"};
+Site            = "EGI.CNAF.it";
+]
